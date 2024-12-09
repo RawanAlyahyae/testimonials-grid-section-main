@@ -10,7 +10,6 @@ body {
    background-color: hsl(210, 46%, 95%);
    font-size: 13px;
    font-family: 'Barlow Semi Condensed', sans-serif;
-
 }
 
 .container {
@@ -19,6 +18,15 @@ body {
    grid-template-columns: ltr;
    gap: 20px;
 }
+
+.attribution {
+   font-size: 11px;
+   text-align: center;
+ }
+
+ .attribution a {
+   color: hsl(228, 45%, 44%);
+ }
 
 .cards {
    position: relative;
@@ -54,7 +62,6 @@ small {
    color: hsl(217, 19%, 35%);
 }
 
-
 .cards .quotes {
    position: absolute;
    right: 20px;
@@ -85,14 +92,27 @@ small {
    font-size: 17px;
 }
 
+@media (min-width: 100px) and (max-width: 400px) {
+   .container {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 250px;
+   }
+}
 
+@media (min-width: 400px) and (max-width : 800px) {
+   .container {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 800px;
+      margin: 50px auto;
 
-@media (min-width: 640px) {
+   }
+}
+
+@media (min-width: 800px) and (max-width : 1024px) {
    .container {
       grid-template-columns: repeat(4, 1fr);
       max-width: 1200px;
       margin: 50px auto;
-
    }
 
    .cards.Daniel {
@@ -101,6 +121,7 @@ small {
 
    .cards.Patrick {
       grid-column: 2/4;
+      grid-row: 2/3;
    }
 
    .cards.Kira {
